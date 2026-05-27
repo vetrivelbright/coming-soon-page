@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Business Name</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/notifications.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <img src="assets/images/logo.png" alt="Logo" class="loader-logo">
+            </div>
+            <div class="spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <img src="assets/images/logo.png" alt="Company Logo" class="company-logo">
+                    <span class="company-name ms-2">Your Company Name</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Coming Soon Hero Section -->
+        <section class="coming-soon-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                        <div class="coming-soon-content fade-in-left">
+                            <h1 class="coming-soon-title">Coming Soon</h1>
+                            <p class="coming-soon-subtitle">We're working on something amazing! Stay tuned for the big reveal.</p>
+                            
+                            <!-- Email Subscription Form -->
+                            <form class="subscription-form" id="subscriptionForm">
+                                <div class="input-group mb-3">
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        placeholder="Enter your email address" 
+                                        required
+                                        id="emailInput"
+                                    >
+                                    <button class="btn btn-primary" type="submit" id="subscribeBtn">
+                                        <span class="btn-text">Notify Me</span>
+                                        <span class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <small class="form-text text-muted">We'll send you updates when we launch.</small>
+                            </form>
+
+                            <!-- Social Links -->
+                            <div class="social-links mt-5">
+                                <p class="social-title">Follow Us</p>
+                                <div class="social-icons">
+                                    <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Illustration/Image Section -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="coming-soon-image fade-in-right">
+                            <img src="assets/images/coming-soon-illustration.png" alt="Coming Soon Illustration" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="contact-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-5">Get In Touch</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h5>Address</h5>
+                            <p>123 Business Street<br>
+                            City, State 12345<br>
+                            Country</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>Phone</h5>
+                            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email</h5>
+                            <p><a href="mailto:info@company.com">info@company.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p>&copy; <span id="year"></span> Your Company Name. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p>Developed by <a href="https://plovertech.com" target="_blank" class="footer-link">Plover Technologies</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
